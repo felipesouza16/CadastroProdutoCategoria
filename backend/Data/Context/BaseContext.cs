@@ -14,7 +14,7 @@ namespace Data.Context
         public DbSet<Produto> Produto { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Database = postgres; SERVER = localhost; Password = 123; User Id = postgres");
+            optionsBuilder.UseMySql("server=localhost;user id=root;persistsecurityinfo=True;sslmode=None;database=mariadb", new MariaDbServerVersion(new Version()));
         }
 
     }
