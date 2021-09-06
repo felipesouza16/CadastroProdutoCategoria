@@ -10,6 +10,7 @@ namespace Estoque.Context
 {
     public class BaseContext : DbContext
     {
+        public DbSet<Product> Product { get; set; }
         public DbSet<Stock> Stock { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
